@@ -1,846 +1,548 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Yemi Appeals | Custom Dresses, Corporate Wear & Ankara Fashion</title>
-
-<meta name="description"
-content="Luxury custom-made dresses, corporate outfits, Ankara styles and special occasion fashion. Crafted with precision, elegance and confidence by Yemi Appeals.">
-
-<meta name="keywords"
-content="Custom Dresses Abuja, Ankara Fashion, Corporate Wear, Fashion Designer Nigeria, Bespoke Dresses">
-
-<meta name="author" content="Yemi Appeals">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<style>
-
-
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yemi Appeals | Custom Fashion & Bespoke Designs</title>
+  <meta name="description" content="Luxury custom-made dresses, corporate wear, Ankara fashion and occasion styling by Yemi Appeals.">
+  <meta name="author" content="Yemi Appeals">
+  <meta name="theme-color" content="#2f132f">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HEADER -->
-<header>
-<div class="container navbar">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Yemi Appeals home">
+        <span class="brand-mark">Y</span>
+        <span>Yemi Appeals</span>
+      </a>
 
-<a href="#" class="logo">
-Yemi Appeals
-</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#custom-order">Custom Orders</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<nav class="nav-links" id="navLinks">
+      <a href="https://wa.me/2347043784426" class="header-cta" target="_blank" rel="noreferrer">WhatsApp Us</a>
 
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+      <button class="menu-toggle" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-</nav>
+  <main id="main">
+    <section class="hero" id="home" aria-label="Fashion hero section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">YEMI APPEALS</p>
+          <h1>MADE TO BE REMEMBERED.</h1>
+          <p class="hero-text">Bespoke dresses, corporate wear and Ankara fashion designed for the moments that matter most—when confidence, elegance and individuality deserve to stand out.</p>
 
-<div class="menu-toggle" id="menuBtn">
-<i class="fas fa-bars"></i>
-</div>
+          <div class="hero-actions">
+            <a href="#collections" class="btn btn-primary">Explore Collection</a>
+            <a href="https://wa.me/2347043784426" class="btn btn-secondary" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+          </div>
+        </div>
 
-</div>
-</header>
+        <div class="hero-controls" aria-label="Hero carousel controls">
+          <span class="hero-counter">01 / 03</span>
+          <div class="hero-arrows">
+            <button class="hero-arrow" id="prevBtn" type="button" aria-label="Previous slide">←</button>
+            <button class="hero-arrow" id="nextBtn" type="button" aria-label="Next slide">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-bg"></div>
-<div class="container">
-<div class="hero-content">
-<h1>Elegance Tailored Exclusively For You</h1>
-<p>From corporate wear to Ankara masterpieces, <br> Yemi Appeals delivers luxury custom fashion designed to elevate your confidence. </p>
+    <section class="section collection-section" id="collections">
+      <div class="container">
+        <div class="section-heading align-left">
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Pieces with presence.</h2>
+        </div>
 
-    <!--controls-->
-    <button class="arrow prev" id="prevBtn" > < </button>
-    <button class="arrow next" id="nextBtn" > > </button>
-    <div class="dots" id="dots"></div>
+        <div class="editorial-grid">
+          <article class="collection-feature">
+            <img src="images/corporate2.jpg" alt="Corporate wear collection" loading="eager">
+            <div class="collection-copy">
+              <span class="collection-tag">Corporate Wear</span>
+              <a href="#custom-order" class="text-link">Explore →</a>
+            </div>
+          </article>
 
-    <!-- Hero CTA -->
-    <div class="hero-cta-wrap center-cta">
-      <a href="#contact" class="btn btn-primary hero-cta">Request a Quote</a>
-      <a href="#services" class="btn btn-secondary hero-cta">Explore Services</a>
+          <article class="collection-item">
+            <img src="images/bubugown2.jpg" alt="Ankara collection" loading="lazy">
+            <div class="collection-copy compact">
+              <span class="collection-tag">Ankara Collection</span>
+              <a href="#custom-order" class="text-link">Explore →</a>
+            </div>
+          </article>
+
+          <article class="collection-item">
+            <img src="images/stone-dress.jpg" alt="Luxury occasion wear" loading="lazy">
+            <div class="collection-copy compact">
+              <span class="collection-tag">Luxury Occasion Wear</span>
+              <a href="#custom-order" class="text-link">Explore →</a>
+            </div>
+          </article>
+
+          <article class="collection-item wide-item">
+            <img src="images/blouse&skirt 2.jpg" alt="Custom design collection" loading="lazy">
+            <div class="collection-copy compact">
+              <span class="collection-tag">Custom Designs</span>
+              <a href="#custom-order" class="text-link">Explore →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT WE CREATE</p>
+          <h2>Fashion tailored to your moment.</h2>
+        </div>
+
+        <div class="service-list">
+          <article class="service-block">
+            <div class="service-number">01</div>
+            <div>
+              <h3>Custom Made</h3>
+              <p>Designed specifically around your vision and measurements.</p>
+            </div>
+            <a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer">Request a design</a>
+          </article>
+
+          <article class="service-block">
+            <div class="service-number">02</div>
+            <div>
+              <h3>Corporate Wear</h3>
+              <p>Professional and polished outfits for work and important occasions.</p>
+            </div>
+            <a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer">Start a conversation</a>
+          </article>
+
+          <article class="service-block">
+            <div class="service-number">03</div>
+            <div>
+              <h3>Ankara Fashion</h3>
+              <p>Modern and traditional Ankara styles tailored to individual taste.</p>
+            </div>
+            <a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer">Get started</a>
+          </article>
+
+          <article class="service-block">
+            <div class="service-number">04</div>
+            <div>
+              <h3>Luxury Occasion Wear</h3>
+              <p>Statement pieces for birthdays, engagements and special occasions.</p>
+            </div>
+            <a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer">Book a fitting</a>
+          </article>
+
+          <article class="service-block">
+            <div class="service-number">05</div>
+            <div>
+              <h3>Alterations</h3>
+              <p>Professional refitting and adjustments for a polished final finish.</p>
+            </div>
+            <a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer">Request service</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section statement-section">
+      <div class="container statement-wrap">
+        <p class="eyebrow">YEMI APPEALS</p>
+        <h2>YOUR STYLE.<br>YOUR STORY.<br>YOUR PIECE.</h2>
+        <p>Every piece is made to do more than dress the body—it should amplify the moment. We create custom designs that feel personal, polished and unmistakably yours.</p>
+      </div>
+    </section>
+
+    <section class="section custom-order-section" id="custom-order">
+      <div class="container custom-order-wrap">
+        <div class="custom-order-image">
+          <img src="images/yemi.jpg" alt="Yemi Appeals custom-made fashion" loading="lazy">
+        </div>
+
+        <div class="custom-order-copy">
+          <p class="eyebrow">CUSTOM MADE</p>
+          <h2>Have something in mind?</h2>
+          <p>Share your inspiration, tell us about the occasion, and let us shape a design that feels unmistakably yours. From concept to finishing details, we guide the process with care.</p>
+
+          <form class="custom-form" novalidate>
+            <div class="field-grid">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="fullName" placeholder="Your full name" autocomplete="name">
+              </label>
+
+              <label>
+                <span>WhatsApp/Phone Number</span>
+                <input type="tel" name="phone" placeholder="Your phone number" autocomplete="tel">
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Your email address" autocomplete="email">
+              </label>
+
+              <label>
+                <span>Type of Outfit</span>
+                <input type="text" name="outfit" placeholder="e.g. Corporate wear">
+              </label>
+
+              <label>
+                <span>Event/Occasion</span>
+                <input type="text" name="occasion" placeholder="e.g. Birthday, engagement">
+              </label>
+
+              <label>
+                <span>Preferred Date</span>
+                <input type="text" name="date" placeholder="Preferred date">
+              </label>
+            </div>
+
+            <label>
+              <span>Design Details</span>
+              <textarea name="details" rows="4" placeholder="Share the style, colour, fabric and fit you want."></textarea>
+            </label>
+
+            <label class="upload-field">
+              <span>Upload Inspiration Image</span>
+              <input type="file" name="inspiration" accept="image/*">
+            </label>
+
+            <div class="custom-order-actions">
+              <button type="submit" class="btn btn-primary">START A CUSTOM ORDER</button>
+              <a href="https://wa.me/2347043784426" class="btn btn-secondary dark" target="_blank" rel="noreferrer">CHAT ON WHATSAPP</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>From idea to finished piece.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span>01</span>
+            <h3>Share Your Idea</h3>
+            <p>Send your inspiration, reference photos or your vision for the outfit.</p>
+          </article>
+
+          <article class="process-card">
+            <span>02</span>
+            <h3>Discuss Your Design</h3>
+            <p>We talk through the style, measurements, details and occasion.</p>
+          </article>
+
+          <article class="process-card">
+            <span>03</span>
+            <h3>We Create</h3>
+            <p>Your piece is carefully designed and made to suit your preferences.</p>
+          </article>
+
+          <article class="process-card">
+            <span>04</span>
+            <h3>Receive Your Finished Piece</h3>
+            <p>Your finished outfit is prepared and delivered with care.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-piece-section">
+      <div class="container feature-piece-wrap">
+        <div class="feature-piece-image">
+          <img src="images/straightgown.jpg" alt="Yemi Appeals signature look" loading="lazy">
+        </div>
+        <div class="feature-piece-copy">
+          <p class="eyebrow">THE SIGNATURE LOOK</p>
+          <h2>Statement pieces with lasting presence.</h2>
+          <p>Luxury fashion with intention—crafted to feel personal, polished and memorable from the first glance to the final entrance.</p>
+          <a href="#collections" class="text-link">VIEW COLLECTION →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lookbook-section" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LOOKBOOK</p>
+          <h2>Fashion stories in motion.</h2>
+        </div>
+
+        <div class="lookbook-grid">
+          <figure class="lookbook-card tall-card">
+            <img src="images/corporate2.jpg" alt="Corporate collection" loading="lazy">
+            <figcaption>Corporate Collection</figcaption>
+          </figure>
+
+          <figure class="lookbook-card small-card">
+            <img src="images/bubugown2.jpg" alt="Ankara elegance" loading="lazy">
+            <figcaption>Ankara Elegance</figcaption>
+          </figure>
+
+          <figure class="lookbook-card large-card">
+            <img src="images/stone-dress.jpg" alt="Luxury fashion" loading="lazy">
+            <figcaption>Luxury Fashion</figcaption>
+          </figure>
+
+          <figure class="lookbook-card small-card">
+            <img src="images/blouse&skirt 2.jpg" alt="Birthday collection" loading="lazy">
+            <figcaption>Birthday Collection</figcaption>
+          </figure>
+
+          <figure class="lookbook-card tall-card">
+            <img src="images/bubugown1.jpg" alt="Custom design" loading="lazy">
+            <figcaption>Custom Design</figcaption>
+          </figure>
+
+          <figure class="lookbook-card small-card">
+            <img src="images/straightgown.jpg" alt="Client transformation" loading="lazy">
+            <figcaption>Client Transformation</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY CLIENTS CHOOSE YEMI</p>
+          <h2>Thoughtful tailoring. Refined details.</h2>
+        </div>
+
+        <div class="value-grid">
+          <article>
+            <h3>Tailored to you</h3>
+            <p>Every piece is designed around your measurements, style and occasion.</p>
+          </article>
+
+          <article>
+            <h3>Built with intention</h3>
+            <p>From concept to finishing, each design is approached with care and craftsmanship.</p>
+          </article>
+
+          <article>
+            <h3>Designed for special moments</h3>
+            <p>Whether it is corporate, Ankara, custom or occasion wear, the focus stays on elegance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-wrap">
+        <div class="about-image-panel">
+          <img src="images/yemi.jpg" alt="Meet Yemi" loading="lazy">
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">MEET YEMI</p>
+          <h2>Personal style, tailored with purpose.</h2>
+          <p>At Yemi Appeals, every design begins with a simple idea: help you feel like the best version of yourself. We specialize in corporate wear, Ankara fashion and luxury custom dresses tailored with precision and purpose.</p>
+          <a href="#custom-order" class="text-link">Discover Our Story →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section">
+      <div class="container">
+        <div class="section-heading align-left">
+          <p class="eyebrow">SOCIAL</p>
+          <h2>Follow the fashion journey.</h2>
+        </div>
+
+        <div class="instagram-grid">
+          <img src="images/corporate2.jpg" alt="Yemi Appeals corporate wear" loading="lazy">
+          <img src="images/blouse&skirt1 .jpg" alt="Yemi Appeals Ankara design" loading="lazy">
+          <img src="images/blouse&skirt 2.jpg" alt="Yemi Appeals fashion styling" loading="lazy">
+          <img src="images/bubugown2.jpg" alt="Yemi Appeals custom outfit" loading="lazy">
+          <img src="images/stone-dress.jpg" alt="Yemi Appeals occasion wear" loading="lazy">
+          <img src="images/straightgown.jpg" alt="Yemi Appeals ready-to-wear look" loading="lazy">
+        </div>
+
+        <div class="text-center">
+          <a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" class="btn btn-primary" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i> Follow @yemilove47</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions.</h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              Do you sew from pictures?
+              <span>−</span>
+            </button>
+            <div class="faq-answer" style="max-height: 200px;">
+              <p>Yes. You can send inspiration photos via WhatsApp and we will create a custom version tailored to your measurements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              How long does production take?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Production time depends on the complexity of the design. Delivery timelines are confirmed before production starts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Do you deliver nationwide?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We deliver across Nigeria through trusted delivery partners.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Do you take urgent orders?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, depending on availability and complexity of the order.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-copy">
+          <p class="eyebrow">CONTACT</p>
+          <h2>LET'S CREATE SOMETHING BEAUTIFUL</h2>
+          <p>Ready for your next custom-made outfit? Reach out today and let’s discuss your style, event and design vision.</p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="icon-box"><i class="fa-brands fa-whatsapp"></i></span>
+              <span>+234 704 378 4426</span>
+            </div>
+            <div class="contact-item">
+              <span class="icon-box"><i class="fa-brands fa-instagram"></i></span>
+              <span>@yemilove47</span>
+            </div>
+            <div class="contact-item">
+              <span class="icon-box"><i class="fa-solid fa-location-dot"></i></span>
+              <span>Abuja, Nigeria</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="enquiry-form" novalidate>
+          <div class="field-grid">
+            <label>
+              <span>Full Name</span>
+              <input type="text" name="fullName" placeholder="Your full name" autocomplete="name" required>
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+            </label>
+
+            <label>
+              <span>Phone Number</span>
+              <input type="tel" name="phone" placeholder="Your phone number" autocomplete="tel" required>
+            </label>
+
+            <label>
+              <span>Inquiry/Service</span>
+              <select name="service" required>
+                <option value="">Select a service</option>
+                <option>Corporate Wear</option>
+                <option>Ankara Fashion</option>
+                <option>Occasion Wear</option>
+                <option>Alterations</option>
+                <option>Custom Design</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Tell us about your dream outfit..." required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">SEND INQUIRY</button>
+            <a href="https://wa.me/2347043784426" class="btn btn-secondary dark" target="_blank" rel="noreferrer">CHAT ON WHATSAPP</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <h3>Yemi Appeals</h3>
+        <p>Luxury custom-made fashion designed to celebrate confidence, elegance and individuality.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#custom-order">Custom Orders</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Connect</h4>
+        <ul class="social-links">
+          <li><a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://wa.me/2347043784426" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+      </div>
     </div>
 
-</div>
-
-<div class="hero-buttons">
-
-<a href="https://wa.me/2347043784426" class="btn btn-primary">
-<i class="fab fa-whatsapp"></i>
-Chat on WhatsApp
-</a>
-
-<a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" class="btn btn-secondary">
-<i class="fab fa-instagram"></i>
-View Instagram
-</a>
-
-</div>
-
-<div class="hero-trust">
-
-<span><i class="fas fa-check-circle"></i> Custom Measurements</span>
-<span><i class="fas fa-check-circle"></i> Premium Finishing</span>
-<span><i class="fas fa-check-circle"></i> Nationwide Delivery</span>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURES --> 
-<section class="features">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Why Choose Yemi Appeals</h2>
-
-<p>Luxury craftsmanship and modern tailoring with premium attention to detail.</p>
-
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-<i class="fas fa-ruler-combined"></i>
-<h3>Perfect Fit</h3>
-<p>Every piece is tailored to your exact measurements.</p>
-</div>
-
-<div class="feature-card">
-<i class="fas fa-gem"></i>
-<h3>Unique Designs</h3>
-<p>Exclusive styles crafted uniquely for each client.</p>
-</div>
-
-<div class="feature-card">
-<i class="fas fa-award"></i>
-<h3>Premium Finishing</h3>
-<p>Luxury stitching and flawless finishing standards.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ======================
-SERVICES
-====================== -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Our Services
-</h2>
-
-<p>
-Fashion crafted with precision, creativity and luxury finishing for every occasion.
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-
-<div class="service-image">
-<img src="images/corporate1.jpg" alt="Corporate Wear">
-</div>
-
-<div class="service-content">
-
-<h3>Corporate Wear</h3>
-
-<p>
-Professional dresses and executive outfits designed to help you look confident, polished and elegant.
-</p>
-
-<a href="https://wa.me/2347043784426" class="whatsapp-btn">
-<i class="fab fa-whatsapp"></i>
-Request Design
-</a>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-image">
-<img src="images/blouse&skirt 2.jpg" alt="Ankara Fashion">
-</div>
-
-<div class="service-content">
-
-<h3>Ankara Collection</h3>
-
-<p>
-Beautiful modern and traditional Ankara styles tailored to your unique taste and personality.
-</p>
-
-<a href="https://wa.me/2347043784426" class="whatsapp-btn">
-<i class="fab fa-whatsapp"></i>
-Request Design
-</a>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-image">
-<img src="images/stone-dress.jpg" alt="Luxury Dresses">
-</div>
-
-<div class="service-content">
-
-<h3>Luxury Occasion Wear</h3>
-
-<p>
-Birthday dresses, engagement outfits and statement pieces crafted to make unforgettable impressions.
-</p>
-
-<a href="https://wa.me/2347043784426" class="whatsapp-btn">
-<i class="fab fa-whatsapp"></i>
-Request Design
-</a>
-
-</div>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-image">
-<img src="images/shortbubu.jpg" alt="Alterations">
-</div>
-
-<div class="service-content">
-
-<h3>Alterations</h3>
-
-<p>
-Professional refitting and adjustments that transform your garments into perfectly fitting pieces.
-</p>
-
-<a href="https://wa.me/2347043784426" class="whatsapp-btn">
-<i class="fab fa-whatsapp"></i>
-Request Service
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-PORTFOLIO
-====================== -->
-
-<section class="portfolio bg-dark" id="portfolio">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Our Portfolio
-</h2>
-
-<p class="muted">A showcase of elegance, craftsmanship and bespoke fashion creations.</p>
-
-</div>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<img src="images/corporate2.jpg" alt="Corporate Collection">
-<div class="portfolio-overlay">
-<h4>Corporate Collection</h4>
-</div>
-</div>
-
-<div class="portfolio-item">
-<img src="images/bubugown2.jpg" alt="Ankara Collection">
-<div class="portfolio-overlay">
-<h4>Ankara Elegance</h4>
-</div>
-</div>
-
-<div class="portfolio-item">
-<img src="images/blouse&skirt1 .jpg" alt="Luxury Fashion">
-<div class="portfolio-overlay">
-<h4>Luxury Fashion</h4>
-</div>
-</div>
-
-<div class="portfolio-item">
-<img src="images/blouse&skirt 2.jpg" alt="Event Dress">
-<div class="portfolio-overlay">
-<h4>Birthday Collection</h4>
-</div>
-</div>
-
-<div class="portfolio-item">
-<img src="images/bubugown1.jpg" alt="Custom Design">
-<div class="portfolio-overlay">
-<h4>Custom Design</h4>
-</div>
-</div>
-
-<div class="portfolio-item">
-<img src="images/straightgown.jpg" alt="Client Transformation">
-<div class="portfolio-overlay">
-<h4>Client Transformation</h4>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-TESTIMONIALS
-====================== -->
-
-<section id="testimonials">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-What Clients Say
-</h2>
-
-<p>
-The trust and satisfaction of our clients speak for the quality of our work.
-</p>
-
-</div>
-
-<div class="testimonial-slider">
-
-<div class="testimonial active">
-<p>"Yemi created my birthday dress and everyone kept asking who made it."</p>
-<h4>— Sarah A.</h4>
-</div>
-
-<div class="testimonial">
-<p>"My corporate wardrobe has completely changed. Very elegant designs."</p>
-<h4>— Chioma O.</h4>
-</div>
-
-<div class="testimonial">
-<p>"Excellent finishing and fast delivery. Highly recommended."</p>
-<h4>— Grace M.</h4>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-ABOUT SECTION
-====================== -->
-
-<section id="about" class="bg-dark">
-
-<div class="container">
-
-<div class="about-grid">
-
-<div>
-<img src="images/yemi.jpg" alt="Yemi Appeals" class="about-image">
-</div>
-
-<div>
-
-<h2>Meet Yemi</h2>
-
-<p class="muted" style="line-height:2; margin-bottom:20px;">
-At Yemi Appeals, fashion is more than clothing. It is confidence, elegance and self-expression.
-</p>
-
-<p class="muted" style="line-height:2; margin-bottom:20px;">We specialize in corporate wear, Ankara fashion and luxury custom dresses tailored with precision.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-INSTAGRAM
-====================== -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Follow Our Fashion Journey</h2>
-
-<p>
-Stay inspired with our latest designs and client transformations.
-</p>
-
-</div>
-
-<div class="instagram-grid">
-
-<img src="images/corporate1.jpg" alt="">
-<img src="images/corporate2.jpg" alt="">
-<img src="images/corporate3.jpg" alt="">
-<img src="images/corporate4.jpg" alt="">
-
-</div>
-
-<div class="center-cta">
-
-<a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" class="btn btn-primary">
-<i class="fab fa-instagram"></i>
-Visit Instagram
-</a>
-
-</div>
-
-</div>
-
-</section>
-<!-- ======================
-FAQ SECTION
-====================== -->
-
-<section id="faq" class="faq-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Frequently Asked Questions</h2>
-
-<p style="color:#666;">
-Answers to common questions about our custom fashion services.
-</p>
-
-</div>
-
-<div class="faq-container">
-
-<div class="faq-item">
-
-<button class="faq-question">
-Do you sew from pictures?
-<span style="color:#6A0DAD;">+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-Yes. You can send inspiration photos via WhatsApp and we will create a custom version tailored to your measurements.
-</p>
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-How long does production take?
-<span style="color:#6A0DAD;">+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-Production time depends on the complexity of the design. Delivery timelines are confirmed before production starts.
-</p>
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-Do you deliver nationwide?
-<span style="color:#6A0DAD;">+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-Yes. We deliver across Nigeria through trusted delivery partners.
-</p>
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<button class="faq-question">
-Do you take urgent orders?
-<span style="color:#6A0DAD;">+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-Yes, depending on availability and complexity of the order.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-CONTACT SECTION
-====================== -->
-
-<section id="contact" style="background:#0E0E10; color:white; padding:100px 0;">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2 style="color:#6A0DAD;">
-Let's Create Something Beautiful
-</h2>
-
-<p style="color:#B8B8C2;">
-Ready for your next custom-made outfit? Reach out today.
-</p>
-
-</div>
-
-<div class="contact-wrapper">
-
-<div class="contact-info">
-
-<h3 style="color:white;">Contact Information</h3>
-
-<div class="contact-item">
-<i class="fab fa-whatsapp icon" style="color:#6A0DAD;"></i>
-<span>+234 704 378 4426</span>
-</div>
-
-<div class="contact-item">
-<i class="fab fa-instagram icon" style="color:#6A0DAD;"></i>
-<span>@yemilove47</span>
-</div>
-
-<div class="contact-item">
-<i class="fas fa-location-dot icon" style="color:#6A0DAD;"></i>
-<span>Abuja, Nigeria</span>
-</div>
-
-</div>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="tel" placeholder="Phone Number" required>
-
-<select required>
-<option value="">Select Service</option>
-<option>Corporate Wear</option>
-<option>Ankara Fashion</option>
-<option>Occasion Dress</option>
-<option>Alterations</option>
-</select>
-
-<textarea rows="6" placeholder="Tell us about your dream outfit..." required></textarea>
-
-<button type="submit" class="btn btn-primary" style="background:#6A0DAD;">
-Send Inquiry
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-FINAL CTA
-====================== -->
-
-<section style="
-background:#6A0DAD;
-color:white;
-text-align:center;
-padding:100px 20px;
-">
-
-<div class="container">
-
-<h2 style="
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-margin-bottom:25px;
-">
-
-Ready To Wear Confidence?
-
-</h2>
-
-<p style="
-max-width:700px;
-margin:auto;
-line-height:2;
-margin-bottom:40px;
-color:#E9E9F5;
-">
-
-Your dream outfit deserves exceptional craftsmanship. Let’s transform your vision into reality.
-
-</p>
-
-<div style="
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-">
-
-<a href="https://wa.me/2347043784426" class="btn btn-primary" style="background:#0E0E10;">
-<i class="fab fa-whatsapp icon"></i>
-Chat on WhatsApp
-</a>
-
-<a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" class="btn btn-secondary">
-<i class="fab fa-instagram icon"></i>
-Follow Instagram
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================
-FOOTER
-====================== -->
-
-<footer style="background:#0E0E10; color:white; padding:80px 0 30px;">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3 style="color:#6A0DAD;">Yemi Appeals</h3>
-
-<p style="color:#B8B8C2;">
-Luxury custom-made fashion designed to celebrate confidence, elegance and individuality.
-</p>
-
-</div>
-
-<div>
-
-<h4>Quick Links</h4>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</div>
-
-
-<div>
-
-<h4>Social Media</h4>
-
-<ul>
-
-<li>
-<a href="https://www.instagram.com/yemilove47?igsh=MWl0ZXhqbjRjYTZtZQ==&utm_source=ig_contact_invite" >
-<i class="fab fa-instagram icon "></i>
-
-</a></li>
-<li>
-<a href="https://wa.me/2347043784426">
-<i class="fab fa-whatsapp icon"></i>
-</a></li>
-
-<li>
-<a href="#">
-<i class="fab fa-tiktok icon"></i>
-</a></li>
-
-</ul>
-
-</div>
-</div>
-
-<div class="copyright">
-
-© 2026 Yemi Appeals. All Rights Reserved.
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- ======================
-JAVASCRIPT (UNCHANGED)
-====================== -->
-
-<script >
-const images = [
-  'images/corporate1.jpg',
-  'images/corporate2.jpg',
-  'images/corporate3.jpg',
-  'images/corporate4.jpg',
-  'images/blouse&skirt1 .jpg',
-  'images/blouse&skirt 2.jpg',
-  'images/bubugown1.jpg',
-  'images/bubugown2.jpg',
-  'images/Short-gown.jpg',
-  'images/shortbubu.jpg',
-  'images/stone-dress.jpg',
-  'images/straightgown.jpg'
-];
-
-let currentSlide = 0;
-const heroBg = document.querySelector('.hero-bg');
-const dotsContainer = document.getElementById('dots');
-
-// Create dots
-images.forEach((_, i) => {
-  const dot = document.createElement('div');
-  dot.classList.add('dot');
-  if (i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToSlide(i));
-  dotsContainer.appendChild(dot);
-});
-
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index) {
-  heroBg.style.backgroundImage = `url('${images[index]}')`;
-  dots.forEach(d => d.classList.remove('active'));
-  dots[index].classList.add('active');
-  currentSlide = index;
-}
-
-function changeSlide(direction) {
-  currentSlide += direction;
-  if (currentSlide >= images.length) currentSlide = 0;
-  if (currentSlide < 0) currentSlide = images.length - 1;
-  showSlide(currentSlide);
-}
-
-function goToSlide(index) {
-  showSlide(index);
-}
-
-// Arrow clicks
-document.getElementById('prevBtn').addEventListener('click', () => changeSlide(-1));
-document.getElementById('nextBtn').addEventListener('click', () => changeSlide(1));
-
-// Auto-slide every 5 seconds
-setInterval(() => changeSlide(1), 5000);
-
-// Show first image on load
-showSlide(0);
-
-
-/* FAQ */
-document.querySelectorAll(".faq-question")
-.forEach(question=>{
-
-question.addEventListener("click",()=>{
-
-const answer =
-question.nextElementSibling;
-
-if(answer.style.maxHeight){
-answer.style.maxHeight = null;
-}else{
-answer.style.maxHeight =
-answer.scrollHeight + "px";
-}
-
-});
-
-});
-
-/* CONTACT FORM */
-document.querySelector(".contact-form")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("Thank you for your inquiry. We will contact you shortly.");
-
-this.reset();
-
-});
-
-/* MOBILE MENU */
-const menuBtn =
-document.getElementById("menuBtn");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuBtn.addEventListener("click",()=>{
-
-navLinks.classList.toggle("active");
-
-});
-
-</script>
+    <div class="container copyright">© 2026 Yemi Appeals. All Rights Reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/2347043784426" class="floating-whatsapp" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <span class="desktop-label">WhatsApp Us →</span>
+    <span class="mobile-label"><i class="fa-brands fa-whatsapp"></i></span>
+  </a>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
