@@ -1,4 +1,4 @@
-const slides = [
+﻿const slides = [
   'images/corporate2.jpg',
   'images/stone-dress.jpg',
   'images/blouse&skirt 2.jpg'
@@ -11,6 +11,8 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 function setHeroSlide(index) {
+  if (!hero || !counter) return;
+
   const nextIndex = (index + slides.length) % slides.length;
   hero.style.backgroundImage = `linear-gradient(90deg, rgba(12, 10, 13, 0.72), rgba(12, 10, 13, 0.34)), url('${slides[nextIndex]}')`;
   currentSlide = nextIndex;
@@ -18,28 +20,33 @@ function setHeroSlide(index) {
   counter.textContent = `${count} / 03`;
 }
 
-function moveSlide(direction) {
-  setHeroSlide(currentSlide + direction);
+if (prevBtn && nextBtn) {
+  function moveSlide(direction) {
+    setHeroSlide(currentSlide + direction);
+  }
+
+  prevBtn.addEventListener('click', () => moveSlide(-1));
+  nextBtn.addEventListener('click', () => moveSlide(1));
+
+  let slideTimer = setInterval(() => moveSlide(1), 5000);
+
+  hero?.addEventListener('mouseenter', () => clearInterval(slideTimer));
+  hero?.addEventListener('mouseleave', () => {
+    slideTimer = setInterval(() => moveSlide(1), 5000);
+  });
 }
-
-prevBtn.addEventListener('click', () => moveSlide(-1));
-nextBtn.addEventListener('click', () => moveSlide(1));
-
-let slideTimer = setInterval(() => moveSlide(1), 5000);
-hero.addEventListener('mouseenter', () => clearInterval(slideTimer));
-hero.addEventListener('mouseleave', () => {
-  slideTimer = setInterval(() => moveSlide(1), 5000);
-});
 
 setHeroSlide(0);
 
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
-menuBtn.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('active');
-  menuBtn.setAttribute('aria-expanded', String(isOpen));
-});
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+}
 
 document.querySelectorAll('.faq-question').forEach((button) => {
   button.addEventListener('click', () => {
@@ -68,34 +75,69 @@ function openWhatsApp(message) {
   window.open(`https://wa.me/2347043784426?text=${encoded}`, '_blank', 'noopener');
 }
 
-document.querySelector('.custom-form').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formData = new FormData(this);
-  const message = [
-    'Hello Yemi Appeals, I would like to start a custom order.',
-    `Full Name: ${formData.get('fullName') || ''}`,
-    `WhatsApp/Phone Number: ${formData.get('phone') || ''}`,
-    `Email: ${formData.get('email') || ''}`,
-    `Type of Outfit: ${formData.get('outfit') || ''}`,
-    `Event/Occasion: ${formData.get('occasion') || ''}`,
-    `Preferred Date: ${formData.get('date') || ''}`,
-    `Design Details: ${formData.get('details') || ''}`
-  ].join('\n');
-  openWhatsApp(message);
-  this.reset();
-});
+function showFormStatus(form, type, message) {
+  const status = form.querySelector('.form-status');
+  if (!status) return;
 
-document.querySelector('.enquiry-form').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formData = new FormData(this);
-  const message = [
-    'Hello Yemi Appeals, I would like to send an inquiry.',
-    `Full Name: ${formData.get('fullName') || ''}`,
-    `Email: ${formData.get('email') || ''}`,
-    `Phone Number: ${formData.get('phone') || ''}`,
-    `Inquiry/Service: ${formData.get('service') || ''}`,
-    `Message: ${formData.get('message') || ''}`
-  ].join('\n');
-  openWhatsApp(message);
-  this.reset();
-});
+  status.textContent = message;
+  status.className = `form-status ${type}`;
+}
+
+function validateRequiredText(value, fieldName) {
+  if (!String(value || '').trim()) {
+    return `${fieldName} is required.`;
+  }
+  return '';
+}
+
+const enquiryForm = document.querySelector('.enquiry-form');
+
+if (enquiryForm) {
+  enquiryForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const fullName = formData.get('fullName') || '';
+    const email = String(formData.get('email') || '').trim();
+    const phone = String(formData.get('phone') || '').trim();
+    const service = String(formData.get('service') || '').trim();
+    const messageText = String(formData.get('message') || '').trim();
+
+    const fieldChecks = [
+      validateRequiredText(fullName, 'Full Name'),
+      validateRequiredText(email, 'Email'),
+      validateRequiredText(phone, 'Phone Number'),
+      validateRequiredText(service, 'Type of Outfit'),
+      validateRequiredText(messageText, 'Message')
+    ].filter(Boolean);
+
+    if (fieldChecks.length > 0) {
+      showFormStatus(this, 'error', fieldChecks[0]);
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      showFormStatus(this, 'error', 'Please enter a valid email address.');
+      return;
+    }
+
+    if (phone.length < 7) {
+      showFormStatus(this, 'error', 'Please enter a valid phone number.');
+      return;
+    }
+
+    const whatsappMessage = [
+      'Hello Yemi Appeals, I would like to send an inquiry.',
+      `Full Name: ${fullName}`,
+      `Email: ${email}`,
+      `Phone Number: ${phone}`,
+      `Type of Outfit: ${service}`,
+      `Message: ${messageText}`
+    ].join('\n');
+
+    openWhatsApp(whatsappMessage);
+    showFormStatus(this, 'success', 'Your inquiry is ready to send on WhatsApp.');
+    this.reset();
+  });
+}
